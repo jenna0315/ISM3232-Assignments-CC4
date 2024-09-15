@@ -53,3 +53,12 @@ ${determineStock(inventory[4])}`
 }
 let stockLevels = checkLowStock(inventory)
 console.log(stockLevels)
+
+//Task 5 Create calculateInventoryValue function
+console.log(`Total Value of All Inventory:`)
+function calculateInventoryValue (){
+    return inventory.reduce((totalValue,product) => 
+        {return totalValue + (product.price * product.quantity)},0);
+};
+const inventoryTotalValue = calculateInventoryValue(inventory)
+console.log(`The Total Inventory Value is $${inventoryTotalValue}`);
