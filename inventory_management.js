@@ -62,3 +62,17 @@ function calculateInventoryValue (){
 };
 const inventoryTotalValue = calculateInventoryValue(inventory)
 console.log(`The Total Inventory Value is $${inventoryTotalValue}`);
+
+//Task 6 Create processSale function
+console.log(`Inventory After Recent Sale:`)
+function processSale (product,unitsSold)
+{var sale = inventory.find(({name}) => name===product)
+if (inventory.includes(product)){
+return `Product Not Found In Inventory`;
+}else {
+    return updateStock(sale,unitsSold)
+}
+}
+console.log(processSale("IPhone 15",22))
+console.log(`Inventory Summary After Updates:`);
+console.log(displayProductDetails(inventory));
