@@ -37,3 +37,19 @@ function updateStock(inventory,unitsSold){
 };//update the stock after items are sold
 console.log(updateStock(inventory[0],20));
 console.log(`Product Availability Warning! ${determineStock(inventory[0])}`);//reflect stock status after update
+
+//Task 4 Create checkLowStock function
+console.log(`Check Stock Levels After Sale of Goods:`)
+function checkLowStock(inventory) {
+    for (let lowStockLevel of inventory)
+    {if(inventory.quantity <= inventory.lowStockLevel) {
+      return`Everything is In Stock`}
+    }
+return `${determineStock(inventory[0])}
+${determineStock(inventory[1])}
+${determineStock(inventory[2])}
+${determineStock(inventory[3])}
+${determineStock(inventory[4])}`
+}
+let stockLevels = checkLowStock(inventory)
+console.log(stockLevels)
