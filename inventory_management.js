@@ -28,3 +28,12 @@ console.log(`${determineStock(inventory[1])}`);
 console.log(`${determineStock(inventory[2])}`);
 console.log(`${determineStock(inventory[3])}`);
 console.log(`${determineStock(inventory[4])}`);
+
+//Task 3 Create updateStock function
+console.log(`Updated Stock After Sale:`)//better organization of console display
+function updateStock(inventory,unitsSold){
+   let newStock = inventory.quantity -= unitsSold
+    return `There are now ${newStock} ${inventory.name}s remaining!`
+};//update the stock after items are sold
+console.log(updateStock(inventory[0],20));
+console.log(`Product Availability Warning! ${determineStock(inventory[0])}`);//reflect stock status after update
